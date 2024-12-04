@@ -17,21 +17,36 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 ### Diagrama de classes
 ![Diagrama UML com Strategy](diagramas/ClasseUML-atualizado.jpeg)
 
-## Design Pattern: Strategy
+## Design Patterns
 
+
+### Strategy
 Foi implementado o Design Pattern **Strategy** para definir diferentes estratégias de geração de relatórios. Isso permite que novas formas de gerar relatórios sejam facilmente adicionadas sem modificar o código existente.
 
-### Estratégias Disponíveis
+#### Estratégias Disponíveis
 - **Relatório em PDF**: Gera o relatório em formato PDF.
 - **Relatório em PNG**: Gera o relatório como uma imagem PNG.
 - **Relatório no Terminal**: Exibe o relatório diretamente no terminal.
-### Benefícios
+#### Benefícios
 - **Flexibilidade**: Permite adicionar novas estratégias de geração de relatórios sem alterar o código existente.
 - **Manutenção**: Reduz o acoplamento entre a lógica de geração de relatórios e a classe de serviço.
 
+### Adapter
+Implementado o Design Pattern **Adapter** pensando na facilidade de comunicação com os outros projetos. Permitindo que seja possível a conversa entre o nosso software com o software das outras equipes, principalmente no momento em que enviamos as cartas aleatórias para o jogoador escolher.
+
+#### Benefícios
+- **Responsabilidade Única**: Separação da lógica de negócio com a conversão dos dados.
+- **Princípio Open/Closed**: Podendo criar novos adapters sem a necessidade de mexer no código existente.
+
+### Singleton
+Garatindo uma única instância do banco de dados para que não ocorra conflitos e a integridade dos dados seja garantida.
+
+#### Benefícios
+- **Recurso economizado**: A instância desejada será criada só quando necessária, evitando objetos indesejados consumindo memória.
+- **Segurança**: Certeza de existir apenas uma instância do banco de dados garante a segurança dos dados ao serem atualizados.
+
 
 ## Responsabilidades das Classes
-
 | Classe                  | Responsabilidade                                                                 |
 |-------------------------|----------------------------------------------------------------------------------|
 | **CartaController**     | - Controla as requisições do usuário relacionadas às cartas.                     |
